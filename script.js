@@ -75,7 +75,7 @@ function cargarPropiedades() {
     selPropiedades.add(new Option('Color', 'color'));
     selPropiedades.add(new Option('Animacion', 'animation'));
     selPropiedades.add(new Option('Fondo', 'backgroundColor'));
-    selPropiedades.add(new Option('Tamaño fuente', 'fontSize'));
+    selPropiedades.add(new Option('TamaÃ±o fuente', 'fontSize'));
 }
 function cargarValores() {
     var selPropiedades = document.querySelector('#propiedades');
@@ -117,9 +117,9 @@ function cargarValores() {
         case 'animation':
             selValores.add(new Option ('Sliden','a'));
             selValores.add(new Option ('ColoresChange','b'));
-            /*selValores.add(new Option ('Purple','c'));
-            selValores.add(new Option ('Yellow',));
-            selValores.add(new Option ('Red'));*/
+            selValores.add(new Option ('rebote','c'));
+            selValores.add(new Option ('giro-X','d'));
+   
             break;
 
 
@@ -143,14 +143,18 @@ function aplicarCSS() {
         
             if (selValores.value=="a") {
                 contenedor.children[selElemento.value].classList.add('animacionSliden')
+ 
     
             } else if(selValores.value=="b"){
                 contenedor.children[selElemento.value].classList.add('coloresChange')
+ 
              }else if(selValores.value=="c"){
-                contenedor.children[selElemento.value].classList.add('coloresChange')
+                contenedor.children[selElemento.value].classList.add('rebote')
+ 
     
              }else if(selValores.value=="d"){
-                contenedor.children[selElemento.value].classList.add('coloresChange')
+                contenedor.children[selElemento.value].classList.add('giroY')
+ 
     
             }else{
                 contenedor.children[selElemento.value].style[selPropiedades.value]=selValores.value;
