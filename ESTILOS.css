@@ -52,6 +52,48 @@ table{
     from {background-color: yellow;}
     to {background-color: pink;}
   }
+.rebote {
+	-webkit-animation: 2s rebote 1;
+    animation-iteration-count: infinite;
+
+	
+}
+.giroY{
+	
+-webkit-animation: 1.5s giroY 1;
+  animation-iteration-count: infinite;
+	                   
+}
+
+@-webkit-keyframes giroY{
+	0%{
+		opacity: 0.5;
+		-webkit-transform: perspective(900px)
+		                   rotateY(90deg);
+	}
+		40%{
+		opacity: 0.5;
+		-webkit-transform: perspective(900px)
+		                   rotateY(-30deg);
+	}
+		70%{
+		opacity: 0.5;
+		-webkit-transform: perspective(900px)
+		                   rotateY(30deg);
+	}
+}
+
+@-webkit-keyframes rebote{
+      20%, 50%, 80%{
+      	-webkit-transform: translateY(0px);
+      }
+      30%{
+      	-webkit-transform: translateY(-45px);
+      }
+      60%{
+      	-webkit-transform: translateY(-25px);
+      }
+}
 
 body {
 background-color: antiquewhite;
